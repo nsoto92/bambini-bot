@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const { prefix } = require('./config.json');
+// const { prefix } = require('./config.json');
 
 
 client.once('ready', () => {
@@ -32,11 +32,11 @@ client.on('guildMemberAdd', member => {
 // Server Message Interactions
 client.on('message', message => {
 	// Server Stats.
-	if (message.content === `${prefix}umbrella`) {
+	if (message.content === `${process.env.PREFIX}umbrella`) {
 		message.channel.send(`Server: ${message.guild.name}\nMiembros: ${message.guild.memberCount} miembros`);
 	}
 	// Trigger First Step.
-	else if (message.content === `${prefix}comenzar`) {
+	else if (message.content === `${process.env.PREFIX}comenzar`) {
 		// First Step Message.
 		const tasking = new Discord.MessageEmbed()
 			.setTitle('Primeras Tareas')
@@ -62,7 +62,7 @@ client.on('message', message => {
 		channel.send(tasking);
 	}
 	// Grant access to rest of server.
-	else if (message.content === `${prefix}terminado`) {
+	else if (message.content === `${process.env.PREFIX}terminado`) {
 		// Role to assign.
 		const role1 = message.guild.roles.cache.find(r => r.name === 'members');
 		// Role to remove.
