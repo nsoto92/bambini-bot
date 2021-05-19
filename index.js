@@ -26,7 +26,7 @@ client.on('guildMemberAdd', member => {
 	// Channel Lookup.
 	if (!channel) return;
 	// Send Greeting if channel exists.
-	channel.send(welcome);
+	channel.send('Test');
 });
 
 // Server Message Interactions
