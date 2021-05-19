@@ -28,9 +28,8 @@ client.on('guildMemberAdd', member => {
 	channel.send(new Discord.MessageEmbed()
 		.setTitle('Bienvenido a Umbrella Loyalty')
 		.setDescription(`Bienvenido ${member}. Primero le tenemos unas tareas antes de otorgar accesso al resto del Discord, cuando estes listo para continuar escriba: !comenzar\n\n Si en cualquier momento necesita ayuda escriba: @Ayuda`)
-		.setColor('#D4AF37'),
-	);
-	// .setThumbnail(`${process.env.THUMB}`));
+		.setColor('#D4AF37')
+		.setThumbnail(`'${process.env.THUMB}'`));
 });
 
 // Server Message Interactions
