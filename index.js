@@ -72,8 +72,8 @@ client.on('message', message => {
 		message.member.roles.add(role1).catch(console.error);
 	}
 	// Announcement
-	else if (message.content === `${process.env.PREFIX}anuncio `) {
-		message.channel.send(`${message.author.username} everyone`)
+	else if (message.content === `${process.env.PREFIX}anuncio`) {
+		message.channel.send(`${message.author.username} @everyone`);
 	}
 });
 
