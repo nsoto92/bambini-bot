@@ -71,6 +71,10 @@ client.on('message', message => {
 		// Add new role.
 		message.member.roles.add(role1).catch(console.error);
 	}
+	// Announcement
+	else if (message.content === `${process.env.PREFIX}anuncio `) {
+		message.channel.send(`${message.author.username}`)
+	}
 });
 
 client.login(`${process.env.BOT_TOKEN}`);
