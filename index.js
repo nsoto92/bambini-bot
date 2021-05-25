@@ -73,7 +73,11 @@ client.on('message', message => {
 	}
 	// Announcement
 	else if (message.content === `${process.env.PREFIX}anuncio`) {
-		message.channel.send(`${message.author.username} @everyone`);
+		const ad = new Discord.MessageEmbed()
+			.setTitle(`Anuncio de parte de ${message.author.username}`)
+			.setDescription('Anuncio aqui')
+			.setThumbnail(`${process.env.THUMB}`);
+		message.channel.send(`${ad} @everyone`);
 	}
 });
 
