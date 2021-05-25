@@ -77,7 +77,7 @@ client.on('message', message => {
 			.setTitle(`Anuncio de parte de ${message.author.username}`)
 			.setDescription('Anuncio aqui')
 			.setThumbnail(`${process.env.THUMB}`);
-		message.channel.send(`${ad} @everyone`);
+		message.channel.send(ad, '@everyone');
 	}
 });
 
