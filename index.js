@@ -73,7 +73,7 @@ client.on('message', message => {
 	}
 	// Announcement
 	else if (message.content === `${process.env.PREFIX}anuncio `) {
-		message.channel.send(`${message.author.username}`)
+		message.channel.send(`${message.author.username} everyone`)
 	}
 });
 
