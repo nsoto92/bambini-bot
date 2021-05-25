@@ -75,7 +75,8 @@ client.on('message', message => {
 	else if (message.content === `${process.env.PREFIX}anuncio`) {
 		const ad = new Discord.MessageEmbed()
 			.setTitle(`Anuncio de parte de ${message.author.username}`)
-			.setDescription('Anuncio aqui @everyone')
+			.setDescription('Anuncio aqui\n@everyone')
+			.setColor('#D4AF37')
 			.setThumbnail(`${process.env.THUMB}`);
 		message.channel.send(ad);
 	}
