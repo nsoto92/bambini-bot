@@ -45,16 +45,16 @@ client.on('message', message => {
 	// 	// First Step Message.
 	// 	const tasking = new Discord.MessageEmbed()
 	// 		.setTitle('Primeras Tareas')
-	// 		.setDescription(`${message.member}, Bienvenido al Discord!\n\nPrimero, debes crear cuentas en las siguientes páginas/aplicaciones:\n 
-	// 		-SAFEPAL\n 
-	// 		-METAMASK\n 
-	// 		-COINMARKET CAP\n 
-	// 		-COINGECKO\n 
-	// 		-TELEGRAM\n 
-	// 		-TWITTER\n 
-	// 		-CRYPTO\n 
-	// 		-TRUSTWALLET\n 
-	// 		-MEDIUM\n 
+	// 		.setDescription(`${message.member}, Bienvenido al Discord!\n\nPrimero, debes crear cuentas en las siguientes páginas/aplicaciones:\n
+	// 		-SAFEPAL\n
+	// 		-METAMASK\n
+	// 		-COINMARKET CAP\n
+	// 		-COINGECKO\n
+	// 		-TELEGRAM\n
+	// 		-TWITTER\n
+	// 		-CRYPTO\n
+	// 		-TRUSTWALLET\n
+	// 		-MEDIUM\n
 	// 		-REDDIT\n\n
 	// 		Diríjase al canal de #tutorial-de-aprendizaje, y siga los 11 tutoriales que se encuentran en "pinned messages".\n
 	// 		Cuando haya terminado escriba: !terminado\n\n Si en cualquier momento necesita ayuda escriba: @Ayuda`)
@@ -95,6 +95,6 @@ client.on('message', message => {
 // 		// Send tasking if channel exists.
 // 		channel.send(ad);
 // 	}
-// });
+});
 
 client.login(`${process.env.BOT_TOKEN}`);
