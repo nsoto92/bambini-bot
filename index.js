@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.once('ready', () => {
-	console.log('Lil Calus out here');
+	console.log('Bambini activo');
 });
 
 // Greet new members.
@@ -38,6 +38,7 @@ client.on('message', message => {
 
 	// Server Stats.
 	if (command === 'server') {
+		console.log('WO');
 		message.channel.send(`Server: ${message.guild.name}\nMembers: ${message.guild.memberCount} members`);
 	}
 	// Trigger First Step.
