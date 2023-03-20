@@ -9,19 +9,19 @@ client.once('ready', () => {
 // Greet new members.
 client.on('guildMemberAdd', member => {
 	// Role lookup.
-	const role1 = member.guild.roles.cache.find(r => r.name === 'clan-member');
+	// const role1 = member.guild.roles.cache.find(r => r.name === 'clan-member');
 
 	// Assign Role.
-	member.roles.add(role1).catch(console.error);
+	// member.roles.add(role1).catch(console.error);
 
 	// Welcome Message.
 	const welcome = new Discord.MessageEmbed()
-		.setTitle('Welcome to the Debauchery Tea Party Server, Guardian')
-		.setDescription(`Welcome ${member}.`)
+		.setTitle('Bienvenido al Discord del Bambini')
+		.setDescription(`Bienvenido ${member}.`)
 		.setColor('#D4AF37')
-		.setThumbnail(`${process.env.THUMB}`);
+		// .setThumbnail(`${process.env.THUMB}`);
 	// Channel to post on.
-	const channel = member.guild.channels.cache.find(ch => ch.name === 'general');
+	const channel = member.guild.channels.cache.find(ch => ch.name === 'bots');
 	// Channel Lookup.
 	if (!channel) return;
 	// Send Greeting if channel exists.
@@ -34,7 +34,7 @@ client.on('message', message => {
 
 	const args = message.content.slice(process.env.PREFIX.length).trim().split(' ');
 	const command = args.shift().toLowerCase();
-	const anuncio = message.content.slice(process.env.PREFIX.length + 7);
+	// const anuncio = message.content.slice(process.env.PREFIX.length + 7);
 
 	// Server Stats.
 	if (command === 'server') {
